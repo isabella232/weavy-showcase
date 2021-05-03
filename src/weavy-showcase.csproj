@@ -4295,6 +4295,8 @@
     <Compile Include="Areas\Api\Controllers\SearchController.cs" />
     <Compile Include="Areas\Api\Controllers\SpacesController.cs" />
     <Compile Include="Areas\Api\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Api\Models\CreateConversationIn.cs" />
+    <Compile Include="Areas\Api\Models\InsertMessageIn.cs" />
     <Compile Include="Areas\Api\Models\SpaceMember.cs" />
     <Compile Include="Areas\Api\Models\UserIn.cs" />
     <Compile Include="Areas\Apps\Controllers\CommentsController.cs" />
