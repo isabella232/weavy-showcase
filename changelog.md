@@ -1,5 +1,33 @@
 # Changelog for Weavy
 
+## 8.2.0 (2021-04-16)
+
+* Added navigation history states, history event and deep link support in client.
+* Added maximize plugin in client.
+* Changed weavy.timeout() to weavy.whenTimeout() in client.
+* Changed client app/space whenLoaded/whenBuilt promises now resolve app/space for convenience.
+* Improved client destroy.
+* Improved client panels.
+* Improved client logging.
+* Fixed an issue when referencing a HTMLElement as container in the client.
+* Fixed layout when using panel controls in client.
+* Fixed issue with messenger back button.
+
+## 8.1.0 (2021-03-08)
+
+* Added ability to customize email templates for notifications etc.
+* Added fulltext text search option for notifications.
+* Fixed issue with notifications being sent for trashed entities.
+
+## 8.0.5 (2021-02-19)
+
+* Fixed an issue with the .off() method in the client preventing handlers to unregister properly.
+
+## 8.0.4 (2021-02-08)
+
+* Fixed issue where user interface was incorrectly updated after file upload.
+* Fixed issue where edit file dialog displayed original, instead of updated filename.
+
 ## 8.0.3 (2020-12-04)
 
 * Fixed issue with space/app key selector

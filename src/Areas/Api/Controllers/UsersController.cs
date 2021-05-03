@@ -4,7 +4,6 @@ using System.Net;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Weavy.Areas.Api.Models;
-using Weavy.Core;
 using Weavy.Core.Models;
 using Weavy.Core.Services;
 using Weavy.Core.Utils;
@@ -20,17 +19,6 @@ namespace Weavy.Areas.Api.Controllers {
     /// </summary>
     [RoutePrefix("api")]
     public class UsersController : WeavyApiController {
-
-        /// <summary>
-        /// Retrieves the current user.
-        /// </summary>
-        /// <returns>Returns a user.</returns>        
-        [HttpGet]
-        [Route("users/me")]
-        public User GetMe()
-        {
-            return UserService.Get(WeavyContext.Current.User.Id);
-        }
 
         /// <summary>
         /// Get the user with the specified id.
@@ -160,16 +148,5 @@ namespace Weavy.Areas.Api.Controllers {
             var result = UserService.Search(query);
             return Ok(new ScrollableList<User>(result, Request.RequestUri));
         }
-
-        ///// <summary>
-        ///// Return the current authenticated user.
-        ///// </summary>
-        ///// <returns></returns>
-        //[HttpGet]
-        //[ResponseType(typeof(User))]
-        //[Route("users/me")]
-        //public IHttpActionResult Me() {
-        //    return Ok(User);
-        //}
     }
 }
