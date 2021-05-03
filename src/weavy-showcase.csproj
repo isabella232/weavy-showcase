@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.1.5\build\JavaScriptEngineSwitcher.V8.Native.win-x64.props" Condition="Exists('..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.1.5\build\JavaScriptEngineSwitcher.V8.Native.win-x64.props')" />
   <Import Project="..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.1.5\build\JavaScriptEngineSwitcher.V8.Native.win-x86.props" Condition="Exists('..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.1.5\build\JavaScriptEngineSwitcher.V8.Native.win-x86.props')" />
@@ -6,8 +6,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion></ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{70CFFD0F-7B12-43EC-9C57-9080937A6B04}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -16,15 +15,14 @@
     <RootNamespace>Weavy</RootNamespace>
     <AssemblyName>Weavy</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44323</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -351,17 +349,17 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="Weavy.Bundler, Version=8.0.3.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="Weavy.Bundler, Version=8.2.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\lib\Weavy.Bundler.dll</HintPath>
     </Reference>
-    <Reference Include="Weavy.Core, Version=8.0.3.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="Weavy.Core, Version=8.2.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\lib\Weavy.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Weavy.Web, Version=8.0.3.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="Weavy.Web, Version=8.2.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\lib\Weavy.Web.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
-    <Reference Include="wvy, Version=8.0.3.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="wvy, Version=8.2.0.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\lib\wvy.exe</HintPath>
     </Reference>
   </ItemGroup>
@@ -3443,9 +3441,6 @@
     <Content Include="img\user.svg" />
     <Content Include="media\message.mp3" />
     <Content Include="media\notification.mp3" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\_bootstrap.bundle" />
     <Content Include="Scripts\_button.bundle" />
     <Content Include="Scripts\_codesample.bundle" />
@@ -3459,26 +3454,22 @@
     <Content Include="Scripts\ie.bundle" />
     <Content Include="Scripts\msofba.bundle" />
     <Content Include="Scripts\pickers.bundle" />
+    <Content Include="Scripts\polyfills\array-from\Array.from.js" />
+    <Content Include="Scripts\polyfills\bluebird\bluebird.core.min.js" />
+    <Content Include="Scripts\polyfills\classlist-polyfill\index.js" />
+    <Content Include="Scripts\polyfills\intersection-observer\intersection-observer.js" />
+    <Content Include="Scripts\polyfills\url-search-params-polyfill\index.js" />
     <Content Include="Scripts\resources\resources.js" />
     <Content Include="Scripts\setup.bundle" />
     <Content Include="Scripts\src\_extensions.js" />
     <Content Include="Scripts\src\_ie.js" />
     <Content Include="Scripts\src\_jquery-check.js" />
     <Content Include="Scripts\src\_noconflict.js" />
-    <Content Include="Scripts\src\alert.js" />
-    <Content Include="Scripts\src\api.js" />
-    <Content Include="Scripts\src\attachment.js" />
-    <Content Include="Scripts\src\audio.js" />
     <Content Include="Scripts\src\authentication.js" />
-    <Content Include="Scripts\src\autosave.js" />
-    <Content Include="Scripts\src\badges.js" />
-    <Content Include="Scripts\src\blocklink.js" />
     <Content Include="Scripts\src\bootstrap\modal.js" />
-    <Content Include="Scripts\src\browser.js" />
-    <Content Include="Scripts\src\button.js" />
     <Content Include="Scripts\src\client\app.js" />
-    <Content Include="Scripts\src\client\console.js" />
     <Content Include="Scripts\src\client\events.js" />
+    <Content Include="Scripts\src\client\history.js" />
     <Content Include="Scripts\src\client\navigation.js" />
     <Content Include="Scripts\src\client\package.json" />
     <Content Include="Scripts\src\client\panels.js" />
@@ -3486,51 +3477,66 @@
     <Content Include="Scripts\src\client\plugins\_weavy-plugin-template.js" />
     <Content Include="Scripts\src\client\plugins\alert.js" />
     <Content Include="Scripts\src\client\plugins\authentication-panel.js" />
+    <Content Include="Scripts\src\client\plugins\deeplinks.js" />
     <Content Include="Scripts\src\client\plugins\filebrowser.js" />
+    <Content Include="Scripts\src\client\plugins\maximize.js" />
     <Content Include="Scripts\src\client\plugins\preview.js" />
     <Content Include="Scripts\src\client\plugins\theme.js" />
-    <Content Include="Scripts\src\client\promise.js" />
     <Content Include="Scripts\src\client\space.js" />
-    <Content Include="Scripts\src\client\utils.js" />
     <Content Include="Scripts\src\client\weavy.js" />
-    <Content Include="Scripts\src\codesample.js" />
-    <Content Include="Scripts\src\comments.js" />
     <Content Include="Scripts\src\connection.js" />
-    <Content Include="Scripts\src\content.js" />
-    <Content Include="Scripts\src\desktop-notifications.js" />
-    <Content Include="Scripts\src\drag.js" />
-    <Content Include="Scripts\src\drawer.js" />
-    <Content Include="Scripts\src\drop.js" />
-    <Content Include="Scripts\src\dropdown.js" />
-    <Content Include="Scripts\src\editor.js" />
-    <Content Include="Scripts\src\emoji.js" />
+    <Content Include="Scripts\src\console.js" />
     <Content Include="Scripts\src\emojionearea\emojionearea.js" />
-    <Content Include="Scripts\src\fab.js" />
-    <Content Include="Scripts\src\fileupload.js" />
-    <Content Include="Scripts\src\guid.js" />
-    <Content Include="Scripts\src\infinitescroll.js" />
-    <Content Include="Scripts\src\modal.js" />
-    <Content Include="Scripts\src\modernizr-custom.js" />
-    <Content Include="Scripts\src\navigation.js" />
-    <Content Include="Scripts\src\notifications.js" />
-    <Content Include="Scripts\src\overlay.js" />
-    <Content Include="Scripts\src\pdf.js" />
     <Content Include="Scripts\src\postal.js" />
-    <Content Include="Scripts\src\posts.js" />
-    <Content Include="Scripts\src\presence.js" />
-    <Content Include="Scripts\src\preview.js" />
-    <Content Include="Scripts\src\recycle-bin.js" />
+    <Content Include="Scripts\src\promise.js" />
     <Content Include="Scripts\src\resources.js" />
-    <Content Include="Scripts\src\scrollbar.js" />
-    <Content Include="Scripts\src\share.js" />
+    <Content Include="Scripts\src\server\alert.js" />
+    <Content Include="Scripts\src\server\api.js" />
+    <Content Include="Scripts\src\server\attachment.js" />
+    <Content Include="Scripts\src\server\audio.js" />
+    <Content Include="Scripts\src\server\autosave.js" />
+    <Content Include="Scripts\src\server\badges.js" />
+    <Content Include="Scripts\src\server\blocklink.js" />
+    <Content Include="Scripts\src\server\browser.js" />
+    <Content Include="Scripts\src\server\button.js" />
+    <Content Include="Scripts\src\server\codesample.js" />
+    <Content Include="Scripts\src\server\comments.js" />
+    <Content Include="Scripts\src\server\content.js" />
+    <Content Include="Scripts\src\server\desktop-notifications.js" />
+    <Content Include="Scripts\src\server\drag.js" />
+    <Content Include="Scripts\src\server\drawer.js" />
+    <Content Include="Scripts\src\server\drop.js" />
+    <Content Include="Scripts\src\server\dropdown.js" />
+    <Content Include="Scripts\src\server\editor.js" />
+    <Content Include="Scripts\src\server\emoji.js" />
+    <Content Include="Scripts\src\server\fab.js" />
+    <Content Include="Scripts\src\server\fileupload.js" />
+    <Content Include="Scripts\src\server\guid.js" />
+    <Content Include="Scripts\src\server\infinitescroll.js" />
+    <Content Include="Scripts\src\server\modal.js" />
+    <Content Include="Scripts\src\server\navigation.js" />
+    <Content Include="Scripts\src\server\notifications.js" />
+    <Content Include="Scripts\src\server\overlay.js" />
+    <Content Include="Scripts\src\server\pdf.js" />
+    <Content Include="Scripts\src\server\posts.js" />
+    <Content Include="Scripts\src\server\presence.js" />
+    <Content Include="Scripts\src\server\preview.js" />
+    <Content Include="Scripts\src\server\recycle-bin.js" />
+    <Content Include="Scripts\src\server\scrollbar.js" />
+    <Content Include="Scripts\src\server\share.js" />
+    <Content Include="Scripts\src\server\sortable.js" />
+    <Content Include="Scripts\src\server\space.js" />
+    <Content Include="Scripts\src\server\star.js" />
+    <Content Include="Scripts\src\server\subscribe.js" />
+    <Content Include="Scripts\src\server\tab.js" />
+    <Content Include="Scripts\src\server\tagsinput.js" />
+    <Content Include="Scripts\src\server\turbolinks.js" />
+    <Content Include="Scripts\src\server\url.js" />
+    <Content Include="Scripts\src\server\user.js" />
+    <Content Include="Scripts\src\server\userspicker.js" />
+    <Content Include="Scripts\src\server\when-loaded.js" />
+    <Content Include="Scripts\src\server\when-loaded-resolve.js" />
     <Content Include="Scripts\src\signalr\jquery.signalR.js" />
-    <Content Include="Scripts\src\sortable.js" />
-    <Content Include="Scripts\src\space.js" />
-    <Content Include="Scripts\src\spacepicker.js" />
-    <Content Include="Scripts\src\star.js" />
-    <Content Include="Scripts\src\subscribe.js" />
-    <Content Include="Scripts\src\tab.js" />
-    <Content Include="Scripts\src\tagsinput.js" />
     <Content Include="Scripts\src\tinymce\plugins\autocomplete\plugin.js" />
     <Content Include="Scripts\src\tinymce\plugins\image\plugin.js" />
     <Content Include="Scripts\src\tinymce\plugins\link\plugin.js" />
@@ -3540,14 +3546,7 @@
     <Content Include="Scripts\src\tinymce\plugins\toolbar\plugin.js" />
     <Content Include="Scripts\src\tinymce\themes\silver\theme.js" />
     <Content Include="Scripts\src\tinymce\tiny.js" />
-    <Content Include="Scripts\src\turbolinks.js" />
-    <Content Include="Scripts\src\url.js" />
-    <Content Include="Scripts\src\user.js" />
-    <Content Include="Scripts\src\userspicker.js" />
-    <Content Include="Scripts\src\when-loaded.js" />
-    <Content Include="Scripts\src\when-loaded-resolve.js" />
-    <Content Include="Scripts\vendor\array-from\Array.from.js" />
-    <Content Include="Scripts\vendor\bluebird\bluebird.core.min.js" />
+    <Content Include="Scripts\src\utils.js" />
     <Content Include="Scripts\vendor\bootstrap\alert.js" />
     <Content Include="Scripts\vendor\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\vendor\bootstrap\button.js" />
@@ -3562,7 +3561,6 @@
     <Content Include="Scripts\vendor\bootstrap\tooltip.js" />
     <Content Include="Scripts\vendor\bootstrap\util.js" />
     <Content Include="Scripts\vendor\bootstrap-html5sortable\jquery.sortable.min.js" />
-    <Content Include="Scripts\vendor\classlist-polyfill\index.js" />
     <Content Include="Scripts\vendor\codemirror\codemirror.js" />
     <Content Include="Scripts\vendor\codemirror\css.js" />
     <Content Include="Scripts\vendor\codemirror\htmlmixed.js" />
@@ -4133,9 +4131,9 @@
     <Content Include="Views\Directories\New.cshtml" />
     <Content Include="Views\Directories\People.cshtml" />
     <Content Include="Views\Email\_Layout.cshtml" />
-    <Content Include="Views\Email\_ViewStart.cshtml" />
     <Content Include="Views\Email\Conversation.cshtml" />
     <Content Include="Views\Email\DailyDigest.cshtml" />
+    <Content Include="Views\Email\Example.cshtml" />
     <Content Include="Views\Email\Notification.cshtml" />
     <Content Include="Views\Email\PasswordReset.cshtml" />
     <Content Include="Views\Email\Test.cshtml" />
@@ -4274,7 +4272,6 @@
     <Content Include="Views\Test\_Localization.cshtml" />
     <Content Include="Views\Test\Api.cshtml" />
     <Content Include="Views\Test\Client.cshtml" />
-    <Content Include="Views\Test\Email.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\Test\LoremIpsum.cshtml" />
     <Content Include="Views\Test\Redirected.cshtml" />
@@ -4291,13 +4288,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.cs" />
-    <Compile Include="Areas\Api\Controllers\ConversationsController.cs" />
     <Compile Include="Areas\Api\Controllers\AppsController.cs" />
     <Compile Include="Areas\Api\Controllers\SearchController.cs" />
     <Compile Include="Areas\Api\Controllers\SpacesController.cs" />
     <Compile Include="Areas\Api\Controllers\UsersController.cs" />
-    <Compile Include="Areas\Api\Models\InsertMessageIn.cs" />
-    <Compile Include="Areas\Api\Models\CreateConversationIn.cs" />
     <Compile Include="Areas\Api\Models\SpaceMember.cs" />
     <Compile Include="Areas\Api\Models\UserIn.cs" />
     <Compile Include="Areas\Apps\Controllers\CommentsController.cs" />
@@ -4320,15 +4314,12 @@
     <Compile Include="Properties\BuildInfo.cs" />
     <Compile Include="Utils\HtmlUtils.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Resources.txt" />
     <None Include="Resources\Resources.en.txt" />
     <None Include="packages.config" />
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4348,7 +4339,15 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44323/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl />
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
@@ -4398,7 +4397,7 @@ using System.Reflection%3B
       <Output TaskParameter="AssignedFilesWithCulture" ItemName="ResourcesWithCulture" />
     </AssignCulture>
     <Message Text="%(Culture) -&gt; @(ResourcesWithCulture)" Importance="High" />
-    <MakeDir Directories="@(ResourcesWithCulture->'bin\%(Culture)\')" />
+    <MakeDir Directories="@(ResourcesWithCulture-&gt;'bin\%(Culture)\')" />
     <AL SdkToolsPath="$(SDK40ToolsPath)" EmbedResources="@(ResourcesWithCulture)" TargetType="library" TemplateFile="bin\Weavy.dll" Culture="%(Culture)" OutputAssembly="bin\%(Culture)\Weavy.resources.dll" />
   </Target>
 </Project>
